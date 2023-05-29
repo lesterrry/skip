@@ -1,0 +1,40 @@
+/*************************
+Handcrafted by Aydar N.
+2023
+
+me@aydar.media
+
+*************************/
+
+input {
+    border: none;
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: #C9C9C9;
+}
+
+:-moz-placeholder {
+    color: #C9C9C9;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: #C9C9C9;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #C9C9C9;
+}
+
+::-ms-input-placeholder {
+    color: #C9C9C9;
+}
+
+::placeholder {
+    color: #C9C9C9;
+}
+
+

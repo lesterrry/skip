@@ -13,5 +13,12 @@
  *= require_self
  */
 
-@import "styles.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import "main.css";
+@import "input.css";
+@import "nav.scss";
+@import "title.scss";
+@import "news.scss";
+@import "mailing-list.scss";
+@import "footer.scss";
 @import "media.css";

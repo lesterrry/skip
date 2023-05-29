@@ -1,0 +1,37 @@
+// Handcrafted by Aydar N.
+// 2023
+//
+// me@aydar.media
+//
+
+body > footer {
+  h1, h2, h3, p {
+    color: white;
+  }
+  > * {
+    width: 1360px;
+    margin: 0 auto;
+  }
+  .menu {
+    display: flex;
+    gap: 158px;
+  }
+  .menu h2 {
+    margin-bottom: 26px;
+  }
+  .menu h3 {
+    margin-bottom: 6px;
+  }
+  > img {
+    display: block;
+    margin-top: 120px;
+  }
+  > .copyright {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+  }
+  > .copyright h2 {
+    text-transform: initial;
+  }
+}

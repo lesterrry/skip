@@ -1,0 +1,28 @@
+// Handcrafted by Aydar N.
+// 2023
+//
+// me@aydar.media
+//
+
+body > nav {
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 10px 8px 10px 6px;
+    border-right: solid black 1px;
+    cursor: pointer;
+  }
+  div:last-of-type {
+    border-right: none;
+  }
+  div > h2 {
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+  }
+  div > img {
+    width: 40px;
+  }
+}

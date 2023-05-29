@@ -1,0 +1,83 @@
+/*************************
+Handcrafted by Aydar N.
+2023
+
+me@aydar.media
+
+*************************/
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F4F4F4;
+}
+
+body > nav {
+    position: fixed;
+    background-color: #F4F4F4;
+    border: solid black 1px;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    height: calc(100% + 2px);
+    right: 0;
+    top: -1px;
+    display: flex;
+    z-index: 1;
+}
+
+body > div {
+    position: relative;
+    width: calc(100% - 220px);
+    padding: 0 28px 0 28px;
+}
+
+body > footer {
+    position: relative;
+    background-color: #202020;
+    margin-top: 80px;
+    padding: 52px 0 26px 0;
+    z-index: 10;
+}
+
+h1, h2, h3, p {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 140px;
+    line-height: 140px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+h3, input {
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 48px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.white-block {
+    border: solid black 1px;
+    border-radius: 10px;
+    background-color: white;
+}

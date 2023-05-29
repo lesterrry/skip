@@ -1,0 +1,24 @@
+// Handcrafted by Aydar N.
+// 2023
+//
+// me@aydar.media
+//
+
+.mailing-list {
+  & {
+    margin-top: 80px;
+  }
+  > h1 {
+    position: relative;
+    z-index: 0;
+  }
+  > div {
+    position: relative;
+    display: flex;
+    margin-top: -40px;
+    padding: 22px 28px 22px 28px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+}
