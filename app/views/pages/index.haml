@@ -1,0 +1,40 @@
+-# Handcrafted by Aydar N.
+-# 2023
+-#
+-# me@aydar.media
+-#
+
+%nav
+	- %w[a b c d].each do |i|
+		%div
+			= image_tag t(".menu.#{i}.image")
+			%h2= t ".menu.#{i}.title"
+%div
+	.title
+		%h1= t '.title'
+		%p= t '.subtitle'
+		= render 'blocks/button', title: 'english', show_arrow: true
+	.news.white-block
+		- %w[a b c].each do |i|
+			%div
+				%div
+					%h3= t ".news.#{i}.title"
+					%p= t ".news.#{i}.body"
+					= render 'blocks/button', title: t(".news.#{i}.button"), show_arrow: true
+				= image_tag t(".news.#{i}.image")
+	.mailing-list
+		%h1= t '.mailing.title'
+		.white-block
+			%input{ type: 'text', placeholder: t('.mailing.address') }
+				%h2.button= t '.mailing.sub'
+%footer
+	.menu
+		- %w[a b c].each do |i|
+			%div
+				%h2= t ".footer.#{i}.title"
+				- %w[a b c].each do |j|
+					%h3= t ".footer.#{i}.items.#{j}"
+	= image_tag 'logo.svg'
+	.copyright
+		%h2= 'aydar.media'
+		%h2= '2023'

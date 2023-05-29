@@ -1,5 +1,10 @@
 en:
-  hello: "Hello world"
   pages:
     index:
-      description: ''
+      title: 'Time to change time'
+
+      menu:
+        a: 'Model A'
+        b: 'Store'
+        c: 'Space'
+        d: 'Events'
