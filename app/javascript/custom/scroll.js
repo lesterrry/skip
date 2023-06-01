@@ -7,12 +7,12 @@ me@aydar.media
 *************************/
 
 $(window).on('scroll', (event) => {
-	const header = $('.title')
+	const header = $('.title > .content')
 	const stopPoint = 310;  // change to the point where you want the header to start scrolling
 
 	if (window.scrollY < stopPoint) {
-		header.css({'margin-bottom': `-${window.scrollY}px`})
+		header.css({'position': 'fixed', 'bottom': '0'})
 	} else {
-		header.css({'margin-bottom': `-${stopPoint}px`})
+		header.css({'position': 'absolute', 'bottom': `-${stopPoint}px`})
 	}
 })

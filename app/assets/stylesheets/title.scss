@@ -7,11 +7,16 @@
 .title {
   & {
     position: relative;
+    height: 100vh;
+  }
+  > .content {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    height: 100vh;
+    gap: 26px;
     z-index: 1;
+    width: calc(100% - 220px);
+    bottom: 0;
   }
   .button {
     position: absolute;

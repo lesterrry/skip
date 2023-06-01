@@ -11,8 +11,9 @@
 			%h2= t ".menu.#{i}.title"
 %div
 	.title
-		%h1= t '.title'
-		%p= t '.subtitle'
+		.content
+			%h1= t '.title'
+			%p= t '.subtitle'
 		= render 'blocks/button', title: 'english', show_arrow: true
 	.news.white-block
 		- %w[a b c].each do |i|
