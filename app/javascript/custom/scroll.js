@@ -7,12 +7,22 @@ me@aydar.media
 *************************/
 
 $(window).on('scroll', () => {
-	const header = $('.title > .content')
-	const stopPoint = 310;  // change to the point where you want the header to start scrolling
+	const $title = $('.title > .content')
+	const $footer = $('footer')
+	const $menu = $('nav')
+	const stopPoint = 310
+	const footerPoint = document.documentElement.scrollHeight - window.innerHeight - window.scrollY - $footer[0].clientHeight
 
 	if (window.scrollY < stopPoint) {
-		header.css({'position': 'fixed', 'bottom': '0'})
+		$title.css({'position': 'fixed', 'bottom': '0'})
 	} else {
-		header.css({'position': 'absolute', 'bottom': `-${stopPoint}px`})
+		$title.css({'position': 'absolute', 'bottom': `-${stopPoint}px`})
+	}
+
+	if (footerPoint < -2) {
+		console.log('aaa')
+		$menu.css({'height': `calc(100% - ${- 	footerPoint - 2}px)`})
+	} else {
+		$menu.removeAttr('style')
 	}
 })
