@@ -6,7 +6,7 @@ me@aydar.media
 
 *************************/
 
-$(window).on('scroll', (event) => {
+$(window).on('scroll', () => {
 	const header = $('.title > .content')
 	const stopPoint = 310;  // change to the point where you want the header to start scrolling
 
