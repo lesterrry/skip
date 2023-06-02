@@ -11,6 +11,7 @@ body > nav {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: 55px;
     padding: 10px 8px 10px 6px;
     border-right: solid black 1px;
     cursor: pointer;
@@ -23,6 +24,7 @@ body > nav {
     transform: rotate(-180deg);
   }
   div > img {
-    width: 40px;
+    width: 95%;
+    height: 14px;
   }
 }
