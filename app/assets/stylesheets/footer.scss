@@ -21,6 +21,10 @@ body > footer {
   }
   .menu h3 {
     margin-bottom: 6px;
+    cursor: pointer;
+  }
+  .menu h3:hover {
+    color: #b4b4b4;
   }
   > img {
     display: block;

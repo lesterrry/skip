@@ -34,9 +34,9 @@ $(window).on('scroll', () => {
 })
 
 $menuItems.on('mouseenter', (event) => {
-	gsap.to(event.target, { width: 100, duration: 0.1 })
+	gsap.to(event.currentTarget, { width: 100, duration: 0.1 })
 })
 
 $menuItems.on('mouseleave', (event) => {
-	gsap.to(event.target, { width: 55, duration: 0.2 })
+	gsap.to(event.currentTarget, { width: 55, duration: 0.2 })
 })
