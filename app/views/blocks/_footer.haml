@@ -11,7 +11,8 @@
 				%h2= t ".#{i}.title"
 				- %w[a b c].each do |j|
 					%h3= t ".#{i}.items.#{j}"
-	= image_tag 'logo.svg'
+	%a{href: root_path}
+		= image_tag 'logo.svg'
 	.copyright
 		%h2= 'aydar.media'
 		%h2= '2023'

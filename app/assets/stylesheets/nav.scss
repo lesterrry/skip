@@ -5,7 +5,7 @@
 //
 
 body > nav {
-  div {
+  a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,14 +16,14 @@ body > nav {
     border-right: solid black 1px;
     cursor: pointer;
   }
-  div:last-of-type {
+  a:last-of-type {
     border-right: none;
   }
-  div > h2 {
+  a > h2 {
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
   }
-  div > img {
+  a > img {
     width: 95%;
     height: 14px;
   }

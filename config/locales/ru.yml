@@ -1,16 +1,16 @@
 ru:
   blocks:
     menu:
-      a:
+      model-a:
         title: 'Model A'
         image: 'c.svg'
-      b:
+      shop:
         title: 'Магазин'
         image: 'k.svg'
-      c:
+      space:
         title: 'Пространство'
         image: 'i.svg'
-      d:
+      events:
         title: 'События'
         image: 'p.svg'
     footer:

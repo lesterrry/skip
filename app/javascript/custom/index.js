@@ -11,7 +11,7 @@ import gsap from "gsap"
 const $title = $('.title > .content')
 const $footer = $('footer')
 const $menu = $('nav')
-const $menuItems = $('nav > div')
+const $menuItems = $('nav > a')
 const titleStopPoint = 310
 const menuStopPoint = 500
 

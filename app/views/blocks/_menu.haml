@@ -5,7 +5,7 @@
 -#
 
 %nav
-	- %w[a b c d].each do |i|
-		%div
+	- %w[model-a shop space events].each do |i|
+		%a{href: i}
 			= image_tag t(".#{i}.image")
 			%h2= t ".#{i}.title"

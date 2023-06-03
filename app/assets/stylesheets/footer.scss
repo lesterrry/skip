@@ -26,9 +26,12 @@ body > footer {
   .menu h3:hover {
     color: #b4b4b4;
   }
-  > img {
+  > a {
     display: block;
     margin-top: 120px;
+  }
+  > a > img {
+    width: 100%;
   }
   > .copyright {
     display: flex;
