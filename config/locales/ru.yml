@@ -55,3 +55,40 @@ ru:
         sub: 'Подписаться'
     events:
       title: 'Мероприятия'
+      list:
+        0:
+          title: 'Собери себя'
+          description: 'Лекция'
+        1:
+          title: 'Новое пространство'
+          description: 'Анонс'
+        2:
+          title: 'Сплетение времен'
+          description: 'Лекция'
+        3:
+          title: 'Построй свою жизнь сам'
+          description: 'Лекция'
+        4:
+          title: 'Никаких ожиданий'
+          description: 'Лекция'
+        5:
+          title: 'Model A: Полное руководство'
+          description: 'Лекция'
+        6:
+          title: 'Прозрачность времени'
+          description: 'Выставка'
+        7:
+          title: 'Длинная выдержка'
+          description: 'Выставка'
+        8:
+          title: 'Время уходит'
+          description: 'Лекция'
+        9:
+          title: 'Времени нет'
+          description: 'Лекция'
+        10:
+          title: 'Давит время?'
+          description: 'Лекция'
+        11:
+          title: 'Запутался?'
+          description: 'Лекция'

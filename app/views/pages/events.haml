@@ -6,7 +6,7 @@
 
 .title
 	.content
-		= render 'blocks/button', title: 'На главную', link: root_path, show_arrow: true
+		= render 'blocks/button', title: 'На главную', link: root_path, show_arrow: false
 		.text
 			%h1= t '.title'
 .grid
@@ -14,5 +14,5 @@
 		%a
 			= image_tag "posters/#{i}.png"
 			%div
-				%h3= 'Давит время?'
-				%h2= 'Лекция / 20.04.2023'
+				%h3= t ".list.#{i}.title"
+				%h2= %Q(#{t ".list.#{i}.description"} / 20.04.2023)
