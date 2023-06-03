@@ -6,22 +6,21 @@ me@aydar.media
 
 *************************/
 
-import gsap from "gsap"
-
 const $title = $('.title > .content')
+const $titleText = $('.title .text')
 const $footer = $('footer')
 const $menu = $('nav')
-const $menuItems = $('nav > a')
-const titleStopPoint = 310
-const menuStopPoint = 500
+const titleStopPoint = 70
 
 const setScroll = () => {
 	const footerPoint = document.documentElement.scrollHeight - window.innerHeight - window.scrollY - $footer[0].clientHeight
 
-	if (window.scrollY < titleStopPoint) {
+	console.log()
+
+	if ($titleText[0].clientHeight - window.scrollY > titleStopPoint) {
 		$title.css({'position': 'fixed', 'bottom': '0'})
 	} else {
-		$title.css({'position': 'absolute', 'bottom': `-${titleStopPoint}px`})
+		$title.css({'position': 'absolute', 'bottom': `-${$titleText[0].clientHeight - titleStopPoint}px`})
 	}
 
 	if (footerPoint / (window.innerHeight) < -0.6) {
@@ -35,14 +34,6 @@ const setScroll = () => {
 
 $(window).on('scroll', () => {
 	setScroll()
-})
-
-$menuItems.on('mouseenter', (event) => {
-	gsap.to(event.currentTarget, { width: 100, duration: 0.1 })
-})
-
-$menuItems.on('mouseleave', (event) => {
-	gsap.to(event.currentTarget, { width: 55, duration: 0.2 })
 })
 
 $(() => {

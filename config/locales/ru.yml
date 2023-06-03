@@ -56,3 +56,5 @@ ru:
         title: 'Рассылка'
         address: 'адрес e-mail'
         sub: 'Подписаться'
+    events:
+      title: 'Мероприятия'
