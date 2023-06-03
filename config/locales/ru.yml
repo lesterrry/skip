@@ -1,21 +1,41 @@
 ru:
+  blocks:
+    menu:
+      a:
+        title: 'Model A'
+        image: 'c.svg'
+      b:
+        title: 'Магазин'
+        image: 'k.svg'
+      c:
+        title: 'Пространство'
+        image: 'i.svg'
+      d:
+        title: 'События'
+        image: 'p.svg'
+    footer:
+      a:
+        title: 'Контакты'
+        items:
+          a: 'Behance'
+          b: 'Telegram'
+          c: 'E-mail'
+      b:
+        title: 'Информация'
+        items:
+          a: 'Пресса'
+          b: 'Компаниям'
+          c: 'Вакансии'
+      c:
+        title: 'Ритейл'
+        items:
+          a: 'Поддержка'
+          b: 'Где купить'
+          c: 'Гарантия'
   pages:
     index:
       title: 'Время менять время'
       subtitle: 'Скип меняет представление о привычном устройстве мира, адаптируя время под персональные нужды'
-      menu:
-        a:
-          title: 'Model A'
-          image: 'c.svg'
-        b:
-          title: 'Магазин'
-          image: 'k.svg'
-        c:
-          title: 'Пространство'
-          image: 'i.svg'
-        d:
-          title: 'События'
-          image: 'p.svg'
       news:
         a:
           title: 'Model A: Как Это Сделано'
@@ -36,22 +56,3 @@ ru:
         title: 'Рассылка'
         address: 'адрес e-mail'
         sub: 'Подписаться'
-      footer:
-        a:
-          title: 'Контакты'
-          items:
-            a: 'Behance'
-            b: 'Telegram'
-            c: 'E-mail'
-        b:
-          title: 'Информация'
-          items:
-            a: 'Пресса'
-            b: 'Компаниям'
-            c: 'Вакансии'
-        c:
-          title: 'Ритейл'
-          items:
-            a: 'Поддержка'
-            b: 'Где купить'
-            c: 'Гарантия'
