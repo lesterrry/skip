@@ -36,6 +36,7 @@ body > div {
 
 body > div > div{
     position: relative;
+    z-index: 1;
 }
 
 body > footer {

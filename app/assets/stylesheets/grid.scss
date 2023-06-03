@@ -1,0 +1,30 @@
+// Handcrafted by Aydar N.
+// 2023
+//
+// me@aydar.media
+//
+
+.grid {
+  & {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    row-gap: 60px;
+    column-gap: 40px;
+  }
+
+  > a {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  h2 {
+    margin-top: 8px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

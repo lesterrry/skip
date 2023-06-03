@@ -11,13 +11,13 @@
 			%h1= t '.title'
 			%p= t '.subtitle'
 .news.white-block
-	- %w[a b c].each do |i|
+	- 3.times do |i|
 		%div
 			%div
 				%h3= t ".news.#{i}.title"
 				%p= t ".news.#{i}.body"
 				= render 'blocks/button', title: t(".news.#{i}.button"), link: nil, show_arrow: true
-			= image_tag t(".news.#{i}.image")
+			= image_tag 'news/1.png'
 .mailing-list
 	%h1= t '.mailing.title'
 	.white-block
