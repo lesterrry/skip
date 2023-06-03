@@ -9,13 +9,14 @@
 class ApplicationController < ActionController::Base
 	before_action :set_locale
 
-	private
+		private
+
 	def set_locale
 		loc = extract_locale
-		unless loc.nil?
-			I18n.locale = loc
-			cookies[:locale] = loc
-		end
+		return if loc.nil?
+
+		I18n.locale = loc
+		cookies[:locale] = loc
 	end
 
 	# TODO: debug locales

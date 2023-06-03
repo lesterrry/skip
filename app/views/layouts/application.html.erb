@@ -11,6 +11,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render partial: 'blocks/menu' %>
+    <div>
+      <%= yield %>
+    </div>
+    <%= render partial: 'blocks/footer' %>
   </body>
 </html>
