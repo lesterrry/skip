@@ -8,7 +8,7 @@
 	.content
 		= render 'blocks/button', title: 'english', link: nil, show_arrow: true
 		.text
-			%h1= explode_span t('.title'), 'spacing'
+			%h1= explode_span t('.title'), 'spacing high'
 			%p= t '.subtitle'
 .news.white-block
 	- 3.times do |i|
@@ -19,7 +19,8 @@
 				= render 'blocks/button', title: t(".news.#{i}.button"), link: nil, show_arrow: true
 			= image_tag 'news/1.png'
 .mailing-list
-	%h1{class: 'spacing'}= t '.mailing.title'
+	%h1{class: %w[spacing low]}= t '.mailing.title'
 	.white-block
 		%input{ type: 'text', placeholder: t('.mailing.address') }
-			%h2.button= t '.mailing.sub'
+			-# %h2.button= t '.mailing.sub'
+			= render 'blocks/button', title: t('.mailing.sub'), link: nil, show_arrow: false

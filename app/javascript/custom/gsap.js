@@ -29,10 +29,10 @@ $scaling.on('mouseleave', (event) => {
 })
 
 $spacing.on('mouseenter', (event) => {
-	gsap.to(event.currentTarget, { letterSpacing: '0.4em', height: '100%', duration: 0.2 })
+	gsap.to(event.currentTarget, { letterSpacing: event.currentTarget.classList.contains('low') ? '0.1em' : '0.4em', duration: 0.2 })
 })
 
 $spacing.on('mouseleave', (event) => {
-	gsap.to(event.currentTarget, { scale: 1, letterSpacing: '0em', duration: 0.2 })
+	gsap.to(event.currentTarget, { letterSpacing: '0em', duration: 0.2 })
 })
 

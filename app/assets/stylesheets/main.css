@@ -60,6 +60,14 @@ h1, h2, h3, p, a {
     text-decoration: none;
 }
 
+h1, h2, h3, p {
+    cursor: crosshair;
+}
+
+a > * {
+    cursor: pointer;
+}
+
 h1 {
     font-weight: 500;
     font-size: 140px;

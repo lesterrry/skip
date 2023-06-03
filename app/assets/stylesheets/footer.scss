@@ -14,7 +14,9 @@ body > footer {
   }
   .menu {
     display: flex;
-    gap: 158px;
+  }
+  .menu > div {
+    width: 400px;
   }
   .menu h2 {
     margin-bottom: 26px;

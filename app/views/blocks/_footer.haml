@@ -10,7 +10,7 @@
 			%div
 				%h2= t ".#{i}.title"
 				- %w[a b c].each do |j|
-					%h3= t ".#{i}.items.#{j}"
+					%h3{class: %w[spacing low]}= t ".#{i}.items.#{j}"
 	%a{href: root_path}
 		= image_tag 'logo.svg'
 	.copyright
