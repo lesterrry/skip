@@ -6,7 +6,7 @@
 
 .title
 	.content
-		= render 'blocks/button', title: 'english', show_arrow: true
+		= render 'blocks/button', title: 'english', link: nil, show_arrow: true
 		.text
 			%h1= t '.title'
 			%p= t '.subtitle'
@@ -16,7 +16,7 @@
 			%div
 				%h3= t ".news.#{i}.title"
 				%p= t ".news.#{i}.body"
-				= render 'blocks/button', title: t(".news.#{i}.button"), show_arrow: true
+				= render 'blocks/button', title: t(".news.#{i}.button"), link: nil, show_arrow: true
 			= image_tag t(".news.#{i}.image")
 .mailing-list
 	%h1= t '.mailing.title'
