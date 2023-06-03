@@ -11,7 +11,7 @@
 			%h1= t '.title'
 .grid
 	- 12.times do |i|
-		%a
+		%a.scaling
 			= image_tag "posters/#{i}.png"
 			%div
 				%h3= t ".list.#{i}.title"
