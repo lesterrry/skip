@@ -15,7 +15,7 @@ const $menuItems = $('nav > div')
 const titleStopPoint = 310
 const menuStopPoint = 500
 
-$(window).on('scroll', () => {
+const setScroll = () => {
 	const footerPoint = document.documentElement.scrollHeight - window.innerHeight - window.scrollY - $footer[0].clientHeight
 
 	if (window.scrollY < titleStopPoint) {
@@ -31,6 +31,10 @@ $(window).on('scroll', () => {
 	} else {
 		$menu.removeAttr('style')
 	}
+}
+
+$(window).on('scroll', () => {
+	setScroll()
 })
 
 $menuItems.on('mouseenter', (event) => {
@@ -39,4 +43,8 @@ $menuItems.on('mouseenter', (event) => {
 
 $menuItems.on('mouseleave', (event) => {
 	gsap.to(event.currentTarget, { width: 55, duration: 0.2 })
+})
+
+$(() => {
+	setScroll()
 })
