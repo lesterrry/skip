@@ -6,9 +6,10 @@
 
 .title
 	.content
-		%h1= t '.title'
-		%p= t '.subtitle'
-	= render 'blocks/button', title: 'english', show_arrow: true
+		= render 'blocks/button', title: 'english', show_arrow: true
+		.text
+			%h1= t '.title'
+			%p= t '.subtitle'
 .news.white-block
 	- %w[a b c].each do |i|
 		%div
