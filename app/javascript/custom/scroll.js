@@ -10,17 +10,15 @@ const $title = $('.title > .content')
 const $titleText = $('.title .text')
 const $footer = $('footer')
 const $menu = $('nav')
-const titleStopPoint = 70
+const titleRemainPoint = 70
 
 const setScroll = () => {
 	const footerPoint = document.documentElement.scrollHeight - window.innerHeight - window.scrollY - $footer[0].clientHeight
 
-	console.log()
-
-	if ($titleText[0].clientHeight - window.scrollY > titleStopPoint) {
+	if ($titleText[0].clientHeight - window.scrollY > titleRemainPoint) {
 		$title.css({'position': 'fixed', 'bottom': '0'})
 	} else {
-		$title.css({'position': 'absolute', 'bottom': `-${$titleText[0].clientHeight - titleStopPoint}px`})
+		$title.css({'position': 'absolute', 'bottom': `-${$titleText[0].clientHeight - titleRemainPoint}px`})
 	}
 
 	if (footerPoint / (window.innerHeight) < -0.6) {
