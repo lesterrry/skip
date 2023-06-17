@@ -10,7 +10,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="<%= action_name.gsub('_', '-') %>">
     <%= render partial: 'blocks/menu' %>
     <div>
       <div class="container">

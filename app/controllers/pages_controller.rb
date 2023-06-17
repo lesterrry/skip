@@ -9,4 +9,5 @@
 class PagesController < ApplicationController
   def index; end
   def events; end
+  def model_a; end
 end

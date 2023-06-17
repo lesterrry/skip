@@ -1,0 +1,132 @@
+<%#
+  Handcrafted by Aydar N.
+  2023
+
+  me@aydar.media
+%>
+
+<!--<div class="logo-big">-->
+<!--  <lottie-player src="assets/js/logo-lottie.json" loop autoplay></lottie-player>-->
+<!--</div>-->
+<div class="description">
+  <div>
+    <h1><span class="font-swap">ВРЕМЯ</span>&nbsp;<span>НА</span>&nbsp;<span>ТВОЕЙ</span>&nbsp;<span>СТОРОНЕ</span></h1>
+    <p>Скип – компания, производящая устройства, которые позволяют управлять течением времени:&nbsp;<span class="enforce">пропускать&nbsp;</span>фрагменты,&nbsp;<span class="enforce">ускорять&nbsp;</span><br>скучное,&nbsp;<span class="enforce">замедлять&nbsp;</span>и&nbsp;<span class="enforce">повторять&nbsp;</span>интересное</p>
+    <div class="circle"></div>
+		<%= image_tag 'model_a/line1.svg', id: 'a', class: 'inline' %>
+		<%= image_tag 'model_a/line2.svg', id: 'b', class: 'inline' %>
+		<%= image_tag 'model_a/line3.svg', id: 'c', class: 'inline' %>
+		<%= image_tag 'model_a/line4.svg', id: 'd', class: 'inline' %>
+  </div>
+</div>
+<div class="snowfall">
+  <div id="lo1" class="snowflake a">
+    <h1>ДОЛГО</h1>
+  </div>
+  <div id="lo2" class="snowflake b">
+    <h1>ДОЛГО</h1>
+  </div>
+  <div id="ye1" class="snowflake c">
+    <h1>ВЧЕРА</h1>
+  </div>
+  <div id="ye2" class="snowflake d">
+    <h1>ВЧЕРА</h1>
+  </div>
+  <div id="to1" class="snowflake e">
+    <h1>СЕГОДНЯ</h1>
+  </div>
+  <div id="to2" class="snowflake f">
+    <h1>СЕГОДНЯ</h1>
+  </div>
+  <div id="sk1" class="snowflake g">
+    <h1>СКИП</h1>
+  </div>
+  <div id="sk2" class="snowflake h">
+    <h1>СКИП</h1>
+  </div>
+  <div id="sk3" class="snowflake a">
+    <h1>СКИП</h1>
+  </div>
+  <div id="th1" class="snowflake b">
+    <h1>ТОГДА</h1>
+  </div>
+  <div id="th2" class="snowflake c">
+    <h1>ТОГДА</h1>
+  </div>
+  <div id="tm1" class="snowflake d">
+    <h1>ЗАВТРА</h1>
+  </div>
+  <div id="tm2" class="snowflake e">
+    <h1>ЗАВТРА</h1>
+  </div>
+  <div id="no1" class="snowflake f">
+    <h1>СЕЙЧАС</h1>
+  </div>
+  <div id="no2" class="snowflake g">
+    <h1>СЕЙЧАС</h1>
+  </div>
+  <div id="fa1" class="snowflake h">
+    <h1>БЫСТРО</h1>
+  </div>
+  <div id="fa2" class="snowflake a">
+    <h1>БЫСТРО</h1>
+  </div>
+  <div id="sp1" class="snowflake b">
+    <h1>ПРОПУСК</h1>
+  </div>
+  <div id="sp2" class="snowflake c">
+    <h1>ПРОПУСК</h1>
+  </div>
+  <div id="so1" class="snowflake d">
+    <h1>СКОРО</h1>
+  </div>
+  <div id="so2" class="snowflake e">
+    <h1>СКОРО</h1>
+  </div>
+  <div id="sl1" class="snowflake f">
+    <h1>ЗАМЕДЛИ</h1>
+  </div>
+  <div id="sl2" class="snowflake g">
+    <h1>ЗАМЕДЛИ</h1>
+  </div>
+  <div id="qu1" class="snowflake h">
+    <h1>ОЧЕРЕДЬ</h1>
+  </div>
+  <div id="qu2" class="snowflake a">
+    <h1>ОЧЕРЕДЬ</h1>
+  </div>
+  <div id="ja1" class="snowflake b">
+    <h1>ПРОБКИ</h1>
+  </div>
+  <div id="ja2" class="snowflake c">
+    <h1>ПРОБКИ</h1>
+  </div>
+  <div id="mi1" class="snowflake d">
+    <h1>МИНУТА</h1>
+  </div>
+  <div id="mi2" class="snowflake e">
+    <h1>МИНУТА</h1>
+  </div>
+</div>
+<div class="model-container">
+  <div class="title-container"><%= image_tag 'model_a/model.svg' %><%= image_tag 'model_a/a.svg' %></div>
+  <div class="three" id="three">
+    <div class="gradient"></div>
+    <% %w[a b c e f g].each do |i| %>
+      <%= image_tag('model_a/round.svg', id: i, class: 'round') %>
+    <% end %>
+		<%= image_tag 'model_a/device.gif', class: 'placeholder' %>
+  </div>
+</div>
+<div class="bricks-parent">
+	<% %w[a b c].each do |i| %>
+		<div id="<%= i %>" class="bricks">
+			<% 4.times do %>
+				<div class="brick">
+					<%= image_tag 'model_a/path_block_active.svg', class: 'active' %>
+					<%= image_tag 'model_a/path_block.svg', class: 'inactive' %>
+				</div>
+			<% end %>
+		</div>
+	<% end %>
+</div>

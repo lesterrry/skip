@@ -11,7 +11,17 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree ./
+ *= require fonts
+ *= require main
+ *= require footer
+ *= require grid
+ *= require input
+ *= require mailing-list
+ *= require nav
+ *= require news
+ *= require title
+ *= require model_a
+ *= require media
  */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
