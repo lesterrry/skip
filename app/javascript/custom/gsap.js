@@ -23,15 +23,15 @@ $menuItems.on('mouseleave', (event) => {
 	gsap.to(event.currentTarget, { width: 55, duration: 0.2 })
 })
 
-// $scaling.on('mouseenter', (event) => {
-// 	gsap.killTweensOf(event.currentTarget)
-// 	hoverTween = gsap.to(event.currentTarget, { scaleX: 1.05, height: '100%', duration: 0.2 })
-// })
-//
-// $scaling.on('mouseleave', (event) => {
-// 	if (hoverTween) { hoverTween.kill() }
-// 	hoverTween = gsap.to(event.currentTarget, { scaleX: 1, height: '100%', duration: 0.1 })
-// })
+$scaling.on('mouseenter', (event) => {
+	gsap.killTweensOf(event.currentTarget)
+	hoverTween = gsap.to(event.currentTarget, { scaleX: 1.1, height: '100%', duration: 0.2 })
+})
+
+$scaling.on('mouseleave', (event) => {
+	gsap.killTweensOf(event.currentTarget)
+	hoverTween = gsap.to(event.currentTarget, { scaleX: 1, height: '100%', duration: 0.1 })
+})
 
 $spacing.on('mouseenter', (event) => {
 	gsap.to(event.currentTarget, { letterSpacing: '0.1em', duration: 0.2 })

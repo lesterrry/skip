@@ -22,6 +22,9 @@
     gap: 26px;
     margin-bottom: 40px;
   }
+  > .content > .text > h1 {
+    white-space: nowrap;
+  }
   .button {
     position: absolute;
     top: 20px;
