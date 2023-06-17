@@ -104,3 +104,8 @@ p {
     border-radius: 10px;
     background-color: white;
 }
+
+span.spacing {
+    display: inline-block;
+    transform-origin: 0 0;
+}

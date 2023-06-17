@@ -6,13 +6,11 @@
 
 # frozen_string_literal: true
 
+require 'spanned'
+
 module ApplicationHelper
-	def explode_span(text, span_class = nil)
-		r = ''
-		open = span_class.nil? ? '<span>' : "<span class=#{span_class}>"
-		text.each_char do |i|
-			r += "#{open}#{i}</span>"
-		end
+	def explode_span(text, span_class = nil, ignore = ' ')
+		r = Spanned.explode(text, span_class: span_class, ignore: ignore)
 		sanitize(r)
 	end
 end
