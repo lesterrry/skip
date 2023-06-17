@@ -8,7 +8,7 @@
 	.content
 		= render 'blocks/button', title: 'На главную', link: root_path, show_arrow: false
 		.text
-			%h1= t '.title'
+			%h1= explode_span t('.title'), 'stretching'
 .grid
 	- 12.times do |i|
 		%a.scaling
