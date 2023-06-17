@@ -109,3 +109,7 @@ span.stretching {
     display: inline-block;
     transform-origin: 0 0;
 }
+
+iframe {
+    border: none;
+}
