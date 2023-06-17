@@ -15,10 +15,12 @@ const titleRemainPoint = 70
 const setScroll = () => {
 	const footerPoint = document.documentElement.scrollHeight - window.innerHeight - window.scrollY - $footer[0].clientHeight
 
-	if ($titleText[0].clientHeight - window.scrollY > titleRemainPoint) {
-		$title.css({'position': 'fixed', 'bottom': '0'})
-	} else {
-		$title.css({'position': 'absolute', 'bottom': `-${$titleText[0].clientHeight - titleRemainPoint}px`})
+	if ($titleText[0]) {
+		if ($titleText[0].clientHeight - window.scrollY > titleRemainPoint) {
+			$title.css({'position': 'fixed', 'bottom': '0'})
+		} else {
+			$title.css({'position': 'absolute', 'bottom': `-${$titleText[0].clientHeight - titleRemainPoint}px`})
+		}
 	}
 
 	if (footerPoint / (window.innerHeight) < -0.6) {

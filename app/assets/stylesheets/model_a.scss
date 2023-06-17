@@ -15,8 +15,10 @@ body.model-a {
     max-width: initial;
   }
   iframe {
+    position: relative;
     width: 100%;
-    height: 3320px;
+    height: 3000px;
+    overflow: hidden;
   }
 }
 
