@@ -15,6 +15,16 @@ const $stretching = $('.stretching')
 
 let hoverTween;
 
+const getChildTarget = (event, className, childSelector) => {
+	let target
+	if ($(event.currentTarget).hasClass(className)) {
+		target = $(event.currentTarget).children(childSelector)[0]
+	} else {
+		target = event.currentTarget
+	}
+	return target
+}
+
 $menuItems.on('mouseenter', (event) => {
 	gsap.to(event.currentTarget, { width: 100, duration: 0.1 })
 })
@@ -24,13 +34,15 @@ $menuItems.on('mouseleave', (event) => {
 })
 
 $scaling.on('mouseenter', (event) => {
-	gsap.killTweensOf(event.currentTarget)
-	hoverTween = gsap.to(event.currentTarget, { scaleX: 1.05, height: '100%', duration: 0.2 })
+	let target = getChildTarget(event, 'list-element', 'img')
+	gsap.killTweensOf(target)
+	hoverTween = gsap.to(target, { scaleX: 1.05, height: '100%', duration: 0.2 })
 })
 
 $scaling.on('mouseleave', (event) => {
-	gsap.killTweensOf(event.currentTarget)
-	hoverTween = gsap.to(event.currentTarget, { scaleX: 1, height: '100%', duration: 0.1 })
+	let target = getChildTarget(event, 'list-element', 'img')
+	gsap.killTweensOf(target)
+	hoverTween = gsap.to(target, { scaleX: 1, height: '100%', duration: 0.1 })
 })
 
 $spacing.on('mouseenter', (event) => {
@@ -48,4 +60,3 @@ $stretching.on('mouseenter', (event) => {
 $stretching.on('mouseleave', (event) => {
 	gsap.to(event.currentTarget, {  scaleX: 1, letterSpacing: '0em', duration: 0.2 })
 })
-

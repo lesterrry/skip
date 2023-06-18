@@ -11,4 +11,5 @@ class PagesController < ApplicationController
   def events; end
   def model_a; end
   def store; end
+  def space; end
 end

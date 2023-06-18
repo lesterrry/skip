@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 	get '/events', to: 'pages#events'
 	get '/model-a', to: 'pages#model_a'
 	get '/store', to: 'pages#store'
+	get '/space', to: 'pages#space'
 end

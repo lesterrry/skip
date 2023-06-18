@@ -9,6 +9,7 @@ me@aydar.media
 input {
     border: none;
     outline: none;
+    background: none;
 }
 
 ::-webkit-input-placeholder {

@@ -1,0 +1,62 @@
+// Handcrafted by Aydar N.
+// 2023
+//
+// me@aydar.media
+//
+
+body.space {
+  & {
+    background-color: #2f2f2f;
+  }
+
+  nav {
+    background-color: #2f2f2f;
+  }
+
+  * {
+    border-color: white;
+  }
+
+  nav h2 {
+    color: white;
+    border-color: white;
+  }
+
+  nav img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+
+  .white-block {
+    background-color: #2f2f2f;
+  }
+
+  .button img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+
+  h1, h2, h3, p, a, input {
+    color: white;
+  }
+
+  .youtube {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* This is the aspect ratio for 16:9 */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .list {
+    margin-top: 40px;
+  }
+}

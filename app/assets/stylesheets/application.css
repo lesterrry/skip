@@ -16,12 +16,13 @@
  *= require footer
  *= require grid
  *= require input
- *= require mailing-list
+ *= require form
  *= require nav
  *= require list
  *= require title
  *= require alert
  *= require model_a
+ *= require space
  *= require media
  */
 

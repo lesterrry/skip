@@ -9,6 +9,25 @@ body.model-a {
     background-color: black;
   }
 
+  nav {
+    background-color: black;
+    border-color: white;
+  }
+
+  nav * {
+    border-color: white;
+  }
+
+  nav h2 {
+    color: white;
+    border-color: white;
+  }
+
+  nav img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+
   .container {
     h1, h2, h3, h4, p, a {
       color: white;

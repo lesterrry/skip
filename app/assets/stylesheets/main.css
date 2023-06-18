@@ -40,7 +40,7 @@ body > div {
     max-width: 1290px;
 }
 
-.container > div {
+.container > div, .container > iframe {
     position: relative;
     z-index: 1;
 }
@@ -128,7 +128,6 @@ span.stretching {
 
 iframe {
     border: none;
-    z-index: 10;
 }
 
 dialog {

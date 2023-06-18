@@ -4,7 +4,7 @@
 // me@aydar.media
 //
 
-.mailing-list {
+.form {
   & {
     margin-top: 80px;
   }
@@ -15,8 +15,23 @@
     position: relative;
     display: flex;
     margin-top: -40px;
+    z-index: 10;
+  }
+  &.oneline > div {
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
+  }
+  &.multiline > div {
+    & {
+      flex-direction: column;
+      gap: 16px;
+    }
+    > div {
+      display: flex;
+      justify-content: space-between;
+    }
+    > a {
+      margin-top: 40px;
+    }
   }
 }
