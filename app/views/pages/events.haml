@@ -16,3 +16,6 @@
 	title: 'pages.events.list.<index>.title',
 	subtitle: 'pages.events.list.<index>.description',
 	subtitle_append: ' / 20.04.2023'
+.white-block.note.unequal
+	%p= 'Для получения билетов зарегистрируйтесь на сайте'
+	= render 'blocks/button', title: 'К регистрации', link: Rails.root + '/', show_arrow: true

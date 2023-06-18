@@ -4,7 +4,7 @@
 -# me@aydar.media
 -#
 
-%a.button.spacing{href: link || '#'}
+%a.button.spacing{ href: link || '#', class: alert && 'alert-call', data: { alert_message: alert } }
 	%h2= title
 	- if show_arrow
 		= image_tag 'arrow.svg'
