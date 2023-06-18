@@ -105,13 +105,20 @@ p {
     background-color: white;
 }
 
+.white-block.equal {
+    padding: 28px;
+}
+
+.white-block.unequal {
+    padding: 22px 28px 22px 28px;
+}
+
 .white-block.note {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     margin-top: 40px;
-    padding: 22px 28px 22px 28px;
 }
 
 span.stretching {
