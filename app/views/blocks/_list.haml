@@ -10,5 +10,5 @@
 			%div
 				%h3= t title.sub('<index>', i.to_s)
 				%p= t subtitle.sub('<index>', i.to_s)
-				= render 'blocks/button', title: t(button_title.sub('<index>', i.to_s)), link: nil, show_arrow: true
-			= image_tag 'news/1.png'
+				= render 'blocks/button', title: t(button_title.sub('<index>', i.to_s)), link: button_links&.dig(i), show_arrow: true
+			= image_tag image.sub('<index>', i.to_s)

@@ -10,7 +10,13 @@
 	button_link: root_url,
 	title: t('.title_html'),
 	subtitle: t('.subtitle')
-= render 'blocks/list', quantity: 3, title: "pages.index.news.<index>.title", subtitle: "pages.index.news.<index>.body", button_title: "pages.index.news.<index>.button"
+= render 'blocks/list',
+	quantity: 3,
+	title: "pages.index.news.<index>.title",
+	subtitle: "pages.index.news.<index>.body",
+	button_title: "pages.index.news.<index>.button",
+	button_links: nil,
+	image: 'news/1.png'
 .form.oneline
 	%h1= explode_span t('.form.title'), 'stretching'
 	.white-block.unequal

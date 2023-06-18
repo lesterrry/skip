@@ -46,6 +46,8 @@ body.space {
     padding-bottom: 56.25%; /* This is the aspect ratio for 16:9 */
     border-radius: 10px;
     overflow: hidden;
+    border: solid white 1px;
+    border-radius: 10px;
   }
 
   .youtube iframe {

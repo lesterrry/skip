@@ -28,10 +28,13 @@
     }
     > div {
       display: flex;
-      justify-content: space-between;
+      gap: 10px;
     }
     > a {
       margin-top: 40px;
+    }
+    input {
+      max-width: 480px;
     }
   }
 }
