@@ -23,8 +23,8 @@ const setScroll = () => {
 		}
 	}
 
-	if (footerPoint / (window.innerHeight) < -0.6) {
-		$menu.css({'height': `40%`})
+	if (footerPoint / (window.innerHeight) < -0.7) {
+		$menu.css({'height': `30%`})
 	} else if (footerPoint < -2) {
 		$menu.css({'height': `calc(100% - ${- 	footerPoint - 2}px)`})
 	} else {

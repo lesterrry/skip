@@ -1,0 +1,13 @@
+-# Handcrafted by Aydar N.
+-# 2023
+-#
+-# me@aydar.media
+-#
+
+.grid{class: "#{rows}-rows"}
+	- (0..quantity).to_a.shuffle.each do |i|
+		%a.scaling
+			= image_tag image.sub('<index>', i.to_s)
+			%div
+				%h3= t title.sub('<index>', i.to_s)
+				%h2= %Q(#{t subtitle.sub('<index>', i.to_s)}#{subtitle_append})

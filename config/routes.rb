@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 	root 'pages#index'
 	get '/events', to: 'pages#events'
 	get '/model-a', to: 'pages#model_a'
+	get '/store', to: 'pages#store'
 end

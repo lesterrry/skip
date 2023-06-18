@@ -112,4 +112,5 @@ span.stretching {
 
 iframe {
     border: none;
+    z-index: 10;
 }

@@ -4,7 +4,7 @@ ru:
       model-a:
         title: 'Model A'
         image: 'c.svg'
-      shop:
+      store:
         title: 'Магазин'
         image: 'k.svg'
       space:
@@ -55,6 +55,7 @@ ru:
         sub: 'Подписаться'
     events:
       title: 'Мероприятия'
+      subtitle: 'Лекции и шоукейсы с бесплатным входом'
       list:
         0:
           title: 'Собери себя'
@@ -92,3 +93,11 @@ ru:
         11:
           title: 'Запутался?'
           description: 'Лекция'
+    model_a:
+      title: 'Model A'
+      subtitle: 'Наше самое компактное устройство, делающее вашу жизнь проще'
+    store:
+      title: 'Магазин'
+      subtitle: 'Мерч, аксессуары и другие продукты Скипа'
+  global:
+    to_home: 'На главную'

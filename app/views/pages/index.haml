@@ -4,12 +4,7 @@
 -# me@aydar.media
 -#
 
-.title
-	.content
-		= render 'blocks/button', title: 'english', link: nil, show_arrow: true
-		.text
-			%h1= explode_span t('.title_html'), 'stretching'
-			%p= t '.subtitle'
+= render 'blocks/title', button_title: t('global.to_home'), title: t('.title_html'), subtitle: t('.subtitle')
 .news.white-block
 	- 3.times do |i|
 		%div
@@ -17,7 +12,7 @@
 				%h3= t ".news.#{i}.title"
 				%p= t ".news.#{i}.body"
 				= render 'blocks/button', title: t(".news.#{i}.button"), link: nil, show_arrow: true
-			= image_tag 'news/1.png'
+			= image_tag 'news/1.png', class: 'scaling'
 .mailing-list
 	%h1= explode_span t('.mailing.title'), 'stretching'
 	.white-block
