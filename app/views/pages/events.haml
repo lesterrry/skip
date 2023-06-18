@@ -18,4 +18,4 @@
 	subtitle_append: ' / 20.04.2023'
 .white-block.note.unequal
 	%p= 'Для получения билетов зарегистрируйтесь на сайте'
-	= render 'blocks/button', title: 'К регистрации', link: Rails.root + '/', show_arrow: true
+	= render 'blocks/button', title: 'К регистрации', link: nil, show_arrow: true, alert: 'Вы ну типа зарегистрировались, ура?'

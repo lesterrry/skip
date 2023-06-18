@@ -4,7 +4,9 @@
 -# me@aydar.media
 -#
 
-.alert
+%dialog.alert
 	.white-block.equal
 		%p= 'UNSET'
-		= render 'blocks/button', title: 'Продолжить', link: nil, show_arrow: false
+		%form{ method: 'dialog' }
+			%button{ tabindex: '-1' }
+				= render 'blocks/button', title: 'Продолжить', link: nil, show_arrow: false
