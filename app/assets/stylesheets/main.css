@@ -105,6 +105,15 @@ p {
     background-color: white;
 }
 
+.white-block.note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 40px;
+    padding: 22px 28px 22px 28px;
+}
+
 span.stretching {
     display: inline-block;
     transform-origin: 0 0;
