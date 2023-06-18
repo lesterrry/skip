@@ -18,7 +18,7 @@
  *= require input
  *= require mailing-list
  *= require nav
- *= require news
+ *= require list
  *= require title
  *= require model_a
  *= require media

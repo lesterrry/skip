@@ -25,7 +25,7 @@ $menuItems.on('mouseleave', (event) => {
 
 $scaling.on('mouseenter', (event) => {
 	gsap.killTweensOf(event.currentTarget)
-	hoverTween = gsap.to(event.currentTarget, { scaleX: 1.1, height: '100%', duration: 0.2 })
+	hoverTween = gsap.to(event.currentTarget, { scaleX: 1.05, height: '100%', duration: 0.2 })
 })
 
 $scaling.on('mouseleave', (event) => {
