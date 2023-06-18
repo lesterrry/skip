@@ -8,7 +8,7 @@
   & {
     display: grid;
     row-gap: 80px;
-    column-gap: 50px;
+    column-gap: 60px;
   }
 
   &.three-rows {
@@ -26,8 +26,10 @@
     cursor: pointer;
   }
 
-  h2 {
-    margin-top: 8px;
+  > a > div > div {
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
   }
 
   img {

@@ -11,4 +11,6 @@
 				= image_tag image.sub('<index>', i.to_s)
 				%div
 					%h3= t title.sub('<index>', i.to_s)
-					%h2= %Q(#{t subtitle.sub('<index>', i.to_s)}#{subtitle_append})
+					%div
+						%h2= t subtitle&.sub('<index>', i.to_s)
+						%h2= t corner&.sub('<index>', i.to_s)

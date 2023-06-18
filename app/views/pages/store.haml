@@ -14,9 +14,9 @@
 	rows: 'two',
 	quantity: 7,
 	image: 'items/<index>.jpg',
-	title: 'pages.events.list.<index>.title',
-	subtitle: 'pages.events.list.<index>.description',
-	subtitle_append: ' / 20.04.2023'
+	title: 'pages.store.list.<index>.title',
+	subtitle: 'pages.store.list.<index>.description',
+	corner: 'pages.store.list.<index>.corner'
 .white-block.note.unequal
 	%p= 'Больше товаров в офлайн-шоуруме'
-	= render 'blocks/button', title: 'Просмотреть', link: root_url + '/space', show_arrow: true
+	= render 'blocks/button', title: 'Просмотреть', link: root_url + 'space', show_arrow: true
