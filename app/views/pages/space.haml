@@ -25,7 +25,7 @@
 	%h1= explode_span t('.form.title'), 'stretching'
 	.white-block.unequal
 		%div
-			%input{ type: 'text', placeholder: t(".form.placeholders.0") }
-			%input{ type: 'text', placeholder: t(".form.placeholders.1") }
-		%input{ type: 'text', placeholder: t(".form.placeholders.2") }
+			%input.affect-cursor{ type: 'text', placeholder: t(".form.placeholders.0") }
+			%input.affect-cursor{ type: 'text', placeholder: t(".form.placeholders.1") }
+		%input.affect-cursor{ type: 'text', placeholder: t(".form.placeholders.2") }
 		= render 'blocks/button', title: t('.form.submit'), link: nil, show_arrow: false, alert: t('.form.alert')

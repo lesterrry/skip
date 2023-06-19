@@ -37,6 +37,7 @@ const setScroll = () => {
 
 $(window).on('scroll', () => {
 	setScroll()
+	$cursorHook = null
 })
 
 $(() => {

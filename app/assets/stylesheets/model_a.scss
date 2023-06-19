@@ -9,12 +9,12 @@ body.model-a {
     background-color: black;
   }
 
-  nav {
-    background-color: black;
+  * {
     border-color: white;
   }
 
-  nav * {
+  nav {
+    background-color: black;
     border-color: white;
   }
 
