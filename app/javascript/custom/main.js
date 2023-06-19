@@ -9,8 +9,13 @@ me@aydar.media
 import 'jquery'
 import gsap from 'gsap'
 
+
 const setCursor = (hidden) => {
-	gsap.to($cursor[0], { opacity: hidden ? 0 : 1 })
+	gsap.killTweensOf($cursor[0])
+	gsap.to($cursor[0], { opacity: hidden ? 0 : 1, onComplete: () => {
+			setCursorSize(size)
+		}
+	})
 	return hidden
 }
 
