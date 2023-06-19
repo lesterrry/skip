@@ -42,12 +42,15 @@ $scaling.on('mouseenter', (event) => {
 	let target = getChildTarget(event, 'list-element', 'img')
 	gsap.killTweensOf(target)
 	gsap.to(target, { scaleX: 1.05, height: '100%', duration: 0.2 })
+	gsap.to($cursor[0], { width: cursorSize.width + 25, height: cursorSize.height + 25, duration: 0.2 })
 })
 
 $scaling.on('mouseleave', (event) => {
 	let target = getChildTarget(event, 'list-element', 'img')
 	gsap.killTweensOf(target)
-	gsap.to(target, { scaleX: 1, height: '100%', duration: 0.1 })
+	gsap.to(target, { scaleX: 1, height: '100%', duration: 0.2 })
+	gsap.to($cursor[0], { width: cursorSize.width, height: cursorSize.height, duration: 0.2 })
+	// size = setCursorSize({ width: size.width - })
 })
 
 $spacing.on('mouseenter', (event) => {
