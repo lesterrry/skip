@@ -18,5 +18,5 @@
 	subtitle: 'pages.store.list.<index>.description',
 	corner: 'pages.store.list.<index>.corner'
 .white-block.note.unequal
-	%p= 'Больше товаров в офлайн-шоуруме'
-	= render 'blocks/button', title: 'Просмотреть', link: root_url + 'space', show_arrow: true
+	%p= t '.prompt.title'
+	= render 'blocks/button', title: t('.prompt.button'), link: root_url + 'space', show_arrow: true
