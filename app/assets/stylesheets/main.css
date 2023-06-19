@@ -15,7 +15,7 @@ body {
     background-color: #F4F4F4;
 }
 
-body > nav {
+body > nav.desktop {
     position: fixed;
     background-color: #F4F4F4;
     border: solid black 1px;
@@ -25,6 +25,23 @@ body > nav {
     right: 0;
     top: -1px;
     display: flex;
+    z-index: 20;
+}
+
+body > nav.mobile {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    background-color: #F4F4F4;
+    border: solid black 1px;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    bottom: 0;
+    width: 100%;
+    padding: 28px;
+    margin-bottom: -18.8em;
+    align-items: center;
+    gap: 40px;
     z-index: 20;
 }
 

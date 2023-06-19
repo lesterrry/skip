@@ -22,3 +22,5 @@ const setCursorSize = (size) => {
 	$cursor.css({ 'width' : size.width, 'height': size.height })
 	return size
 }
+
+const MOBILE = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))

@@ -11,6 +11,9 @@ const $scaling = $('.scaling')
 const $spacing = $('.spacing')
 const $stretching = $('.stretching')
 const $hideCursor = $('.hide-cursor')
+const $mobileMenu = $('nav.mobile')
+
+let mobileMenuShown = false
 
 const getChildTarget = (event, className, childSelector) => {
 	let target
@@ -22,54 +25,61 @@ const getChildTarget = (event, className, childSelector) => {
 	return target
 }
 
-$hideCursor.on('mouseover', () => {
-	cursorHidden = setCursor(true)
+$mobileMenu.on('click', (event) => {
+	gsap.to(event.currentTarget, { marginBottom: mobileMenuShown ? '-18.8em' : 0 })
+	mobileMenuShown = !mobileMenuShown
 })
 
-$hideCursor.on('mouseleave', () => {
-	cursorHidden = setCursor(false)
-})
+if(!MOBILE) {
+	$hideCursor.on('mouseover', () => {
+		cursorHidden = setCursor(true)
+	})
 
-$menuItems.on('mouseenter', (event) => {
-	gsap.to(event.currentTarget, { width: 100, duration: 0.1 })
-})
+	$hideCursor.on('mouseleave', () => {
+		cursorHidden = setCursor(false)
+	})
 
-$menuItems.on('mouseleave', (event) => {
-	gsap.to(event.currentTarget, { width: 55, duration: 0.2 })
-})
+	$menuItems.on('mouseenter', (event) => {
+		gsap.to(event.currentTarget, {width: 100, duration: 0.1})
+	})
 
-$scaling.on('mouseenter', (event) => {
-	let target = getChildTarget(event, 'list-element', 'img')
-	gsap.killTweensOf(target)
-	gsap.to(target, { scaleX: 1.05, height: '100%', duration: 0.2 })
-	if($cursorHook) return
-	cursorSize.target = { width: cursorSize.base.width + 25, height: cursorSize.base.height + 25 }
-})
+	$menuItems.on('mouseleave', (event) => {
+		gsap.to(event.currentTarget, {width: 55, duration: 0.2})
+	})
 
-$scaling.on('mouseleave', (event) => {
-	let target = getChildTarget(event, 'list-element', 'img')
-	gsap.killTweensOf(target)
-	gsap.to(target, { scaleX: 1, height: '100%', duration: 0.2 })
-	if($cursorHook) return
-	cursorSize.target = cursorSize.base
-})
+	$scaling.on('mouseenter', (event) => {
+		let target = getChildTarget(event, 'list-element', 'img')
+		gsap.killTweensOf(target)
+		gsap.to(target, {scaleX: 1.05, height: '100%', duration: 0.2})
+		if ($cursorHook) return
+		cursorSize.target = {width: cursorSize.base.width + 25, height: cursorSize.base.height + 25}
+	})
 
-$spacing.on('mouseenter', (event) => {
-	gsap.to(event.currentTarget, { letterSpacing: '0.1em', duration: 0.2 })
-})
+	$scaling.on('mouseleave', (event) => {
+		let target = getChildTarget(event, 'list-element', 'img')
+		gsap.killTweensOf(target)
+		gsap.to(target, {scaleX: 1, height: '100%', duration: 0.2})
+		if ($cursorHook) return
+		cursorSize.target = cursorSize.base
+	})
 
-$spacing.on('mouseleave', (event) => {
-	gsap.to(event.currentTarget, { letterSpacing: '0em', duration: 0.2 })
-})
+	$spacing.on('mouseenter', (event) => {
+		gsap.to(event.currentTarget, {letterSpacing: '0.1em', duration: 0.2})
+	})
 
-$stretching.on('mouseenter', (event) => {
-	gsap.to(event.currentTarget, {  scaleX: 1.5, letterSpacing: '0.4em', duration: 0.2 })
-	if($cursorHook) return
-	cursorSize.target = { width: cursorSize.base.width + 100, height: cursorSize.base.height - 20 }
-})
+	$spacing.on('mouseleave', (event) => {
+		gsap.to(event.currentTarget, {letterSpacing: '0em', duration: 0.2})
+	})
 
-$stretching.on('mouseleave', (event) => {
-	gsap.to(event.currentTarget, {  scaleX: 1, letterSpacing: '0em', duration: 0.2 })
-	if($cursorHook) return
-	cursorSize.target = cursorSize.base
-})
+	$stretching.on('mouseenter', (event) => {
+		gsap.to(event.currentTarget, {scaleX: 1.5, letterSpacing: '0.4em', duration: 0.2})
+		if ($cursorHook) return
+		cursorSize.target = {width: cursorSize.base.width + 100, height: cursorSize.base.height - 20}
+	})
+
+	$stretching.on('mouseleave', (event) => {
+		gsap.to(event.currentTarget, {scaleX: 1, letterSpacing: '0em', duration: 0.2})
+		if ($cursorHook) return
+		cursorSize.target = cursorSize.base
+	})
+}

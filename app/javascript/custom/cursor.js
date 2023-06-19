@@ -38,23 +38,6 @@ let $cursorHook = null
 
 let lastTime = 0;
 
-$(window).on('mousemove', (event) => {
-	if(cursorHidden) cursorHidden = setCursor(false)
-	cursorPosition.target = $cursorHook ? {
-		x: $cursorHook.offset().left - $(document).scrollLeft() + ($cursorHook.width() * 0.25) - 7.25,
-		y: $cursorHook.offset().top - $(document).scrollTop() + ($cursorHook.height() * 0.75) + 2.8
-	}
-	: { x: event.clientX, y: event.clientY }
-})
-
-$affects.on('mouseover', (event) => {
-	$cursorHook = $(event.currentTarget)
-})
-$affects.on('mouseleave', (event) => {
-	$cursorHook = null
-	cursorSize.target = cursorSize.base
-})
-
 const animate = (currentTime) => {
 	const deltaTime = (currentTime - lastTime) / 1000; // in seconds
 
@@ -81,6 +64,25 @@ const animate = (currentTime) => {
 	window.requestAnimationFrame(animate)
 }
 
-setCursorSize(cursorSize.current)
+if(!MOBILE) {
+	$(window).on('mousemove', (event) => {
+		if (cursorHidden) cursorHidden = setCursor(false)
+		cursorPosition.target = $cursorHook ? {
+				x: $cursorHook.offset().left - $(document).scrollLeft() + ($cursorHook.width() * 0.25) - 7.25,
+				y: $cursorHook.offset().top - $(document).scrollTop() + ($cursorHook.height() * 0.75) + 2.8
+			}
+			: {x: event.clientX, y: event.clientY}
+	})
 
-window.requestAnimationFrame(animate)
+	$affects.on('mouseover', (event) => {
+		$cursorHook = $(event.currentTarget)
+	})
+	$affects.on('mouseleave', (event) => {
+		$cursorHook = null
+		cursorSize.target = cursorSize.base
+	})
+
+	setCursorSize(cursorSize.current)
+
+	window.requestAnimationFrame(animate)
+}

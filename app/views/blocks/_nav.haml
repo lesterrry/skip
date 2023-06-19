@@ -4,8 +4,13 @@
 -# me@aydar.media
 -#
 
-%nav
+%nav.desktop
 	- %w[model-a store space events].each do |i|
 		%a{href: i}
 			= image_tag t(".#{i}.image")
+			%h2= t ".#{i}.title"
+%nav.mobile
+	= image_tag 'logo_short.svg'
+	- %w[home model-a store space events].each do |i|
+		%a{href: i}
 			%h2= t ".#{i}.title"

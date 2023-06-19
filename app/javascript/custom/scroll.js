@@ -9,7 +9,7 @@ me@aydar.media
 const $title = $('.title > .content')
 const $titleText = $('.title .text')
 const $footer = $('footer')
-const $menu = $('nav')
+const $menu = $('nav.desktop')
 
 const titleRemainPoint = 70
 
@@ -26,14 +26,17 @@ const setScroll = () => {
 		}
 	}
 
-	if (footerPoint / (window.innerHeight) < -0.7) {
-		$menu.css({'height': `30%`})
-	} else if (footerPoint < -2) {
-		$menu.css({'height': `calc(100% - ${- 	footerPoint - 2}px)`})
-	} else {
-		$menu.removeAttr('style')
+	if(!MOBILE) {
+		if (footerPoint / (window.innerHeight) < -0.7) {
+			$menu.css({'height': `30%`})
+		} else if (footerPoint < -2) {
+			$menu.css({'height': `calc(100% - ${-footerPoint - 2}px)`})
+		} else {
+			$menu.removeAttr('style')
+		}
 	}
 }
+
 
 $(window).on('scroll', () => {
 	setScroll()

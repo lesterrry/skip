@@ -1,6 +1,8 @@
 ru:
   blocks:
-    menu:
+    nav:
+      home:
+        title: 'На главную'
       model-a:
         title: 'Model A'
         image: 'c.svg'

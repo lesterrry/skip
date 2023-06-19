@@ -1,0 +1,188 @@
+/*************************
+Handcrafted by Aydar N.
+2023
+
+me@aydar.media
+
+*************************/
+
+@media (min-width: 2230px) {
+    body > div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1440px) {
+    body > footer {
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+    body > footer > * {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1320px) {
+    .list > div {
+        gap: 60px
+    }
+    h1 {
+        font-size: 100px;
+        line-height: 100px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .list > div {
+        flex-direction: column;
+        gap: 28px;
+    }
+    .list > div > div, .list > div > img {
+        width: 100%;
+        max-width: initial;
+    }
+    .list > div > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .list .button {
+        position: static;
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 970px) {
+    .title > .content > .text > h1 {
+        white-space: break-spaces;
+    }
+    .form.oneline > div {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 26px;
+    }
+    .form.oneline input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 80px;
+        line-height: 80px;
+    }
+    .form > div {
+        margin-top: -20px;
+    }
+    .form.multiline > div > div {
+        flex-direction: column;
+        gap: 16px;
+    }
+    body > footer img {
+        display: none;
+    }
+    body > footer .menu {
+        flex-direction: column;
+        gap: 60px;
+    }
+    body > footer .menu > div {
+        width: 100%;
+    }
+    .white-block.note {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 26px;
+    }
+    .grid.two-rows, .grid.three-rows {
+        grid-template-columns: repeat(auto-fill, minmax(1px, 800px));
+    }
+}
+
+@media (max-width: 720px) {
+    body > div {
+        width: 100%;
+    }
+    .title > .content {
+        width: 100%;
+    }
+    .title p {
+        width: 100%;
+        margin-left: 0;
+    }
+    body > nav.desktop {
+        display: none;
+    }
+    body > nav.mobile {
+        display: flex;
+    }
+    figure {
+        display: none;
+    }
+
+}
+
+@media (max-width: 580px) {
+    body > div {
+        padding: 8px;
+    }
+    .title > .content > .text {
+        width: 100%;
+    }
+}
+
+/* Model A */
+
+@media all and (min-width: 2220px) {
+    body.model-a iframe {
+        height: 3480px;
+    }
+}
+
+@media all and (max-width: 1420px) {
+    body.model-a iframe {
+        height: 2080px;
+    }
+}
+
+@media all and (max-width: 1120px) {
+    body.model-a iframe {
+        height: 1680px;
+    }
+}
+
+@media all and (max-width: 420px) {
+    body.model-a iframe {
+        height: 1480px;
+    }
+}
+
+@media all and (max-width: 650px) {
+    .description > div {
+        width: 100%;
+    }
+    .description h1 {
+        overflow-wrap: break-word;
+    }
+    .description .fontswap:hover {
+        font-family: initial;
+    }
+    .description .circle {
+        display: none;
+    }
+    .description p {
+        width: 100%;
+    }
+    .three .placeholder {
+        display: initial;
+    }
+    .three .model {
+        display: none;
+    }
+}
+
+@media all and (max-width: 350px) {
+    body {
+        zoom: 0.6;
+    }
+}

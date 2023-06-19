@@ -4,7 +4,7 @@
 // me@aydar.media
 //
 
-body > nav {
+body > nav.desktop {
   a {
     display: flex;
     flex-direction: column;
@@ -26,5 +26,11 @@ body > nav {
   a > img {
     width: 95%;
     height: 14px;
+  }
+}
+
+body > nav.mobile {
+  img {
+    max-width: 210px;
   }
 }
