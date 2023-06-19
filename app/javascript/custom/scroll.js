@@ -19,8 +19,10 @@ const setScroll = () => {
 	if ($titleText[0]) {
 		if ($titleText[0].clientHeight - window.scrollY > titleRemainPoint) {
 			$title.css({'position': 'fixed', 'bottom': '0'})
+			cursorSize = setCursorSize({ width: 400, height: 400})
 		} else {
 			$title.css({'position': 'absolute', 'bottom': `-${$titleText[0].clientHeight - titleRemainPoint}px`})
+			cursorSize = setCursorSize({ width: 100, height: 100})
 		}
 	}
 

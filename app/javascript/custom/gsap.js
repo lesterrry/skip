@@ -23,11 +23,11 @@ const getChildTarget = (event, className, childSelector) => {
 }
 
 $hideCursor.on('mouseover', () => {
-	hidden = setCursor(true)
+	cursorHidden = setCursor(true)
 })
 
 $hideCursor.on('mouseleave', () => {
-	hidden = setCursor(false)
+	cursorHidden = setCursor(false)
 })
 
 $menuItems.on('mouseenter', (event) => {
@@ -60,10 +60,10 @@ $spacing.on('mouseleave', (event) => {
 
 $stretching.on('mouseenter', (event) => {
 	gsap.to(event.currentTarget, {  scaleX: 1.5, letterSpacing: '0.4em', duration: 0.2 })
-	gsap.to($cursor[0], { width: size.width + 100, duration: 0.4 })
+	gsap.to($cursor[0], { width: cursorSize.width + 100, height: cursorSize.height - 20, duration: 0.4 })
 })
 
 $stretching.on('mouseleave', (event) => {
 	gsap.to(event.currentTarget, {  scaleX: 1, letterSpacing: '0em', duration: 0.2 })
-	gsap.to($cursor[0], { width: size.width, duration: 0.4 })
+	gsap.to($cursor[0], { width: cursorSize.width, height: cursorSize.height, duration: 0.4 })
 })
