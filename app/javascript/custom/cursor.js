@@ -7,6 +7,7 @@ me@aydar.media
 *************************/
 
 let $cursor = $('figure.cursor')
+let $buttons = $('.button')
 
 let cursorHidden = true
 let cursorPosition = {
@@ -19,7 +20,6 @@ let cursorPosition = {
 		y: 0
 	}
 }
-
 let cursorSize = {
 	current: {
 		width: 400,
@@ -34,16 +34,31 @@ let cursorSize = {
 		height: 400
 	}
 }
+let $cursorHook = null
+
 let lastTime = 0;
 
 $(window).on('mousemove', (event) => {
-	if (cursorHidden) cursorHidden = setCursor(false)
-	cursorPosition.target.x = event.clientX
-	cursorPosition.target.y = event.clientY
+	if(cursorHidden) cursorHidden = setCursor(false)
+	cursorPosition.target = $cursorHook ? {
+		x: $cursorHook.offset().left - $(document).scrollLeft() + ($cursorHook.width() * 0.25) - 7.25,
+		y: $cursorHook.offset().top - $(document).scrollTop() + ($cursorHook.height() * 0.75) + 2.8
+	}
+	: { x: event.clientX, y: event.clientY }
+})
+
+$buttons.on('mouseover', (event) => {
+	$cursorHook = $(event.currentTarget)
+})
+$buttons.on('mouseleave', (event) => {
+	$cursorHook = null
+	cursorSize.target = cursorSize.base
 })
 
 const animate = (currentTime) => {
 	const deltaTime = (currentTime - lastTime) / 1000; // in seconds
+
+	if($cursorHook) cursorSize.target = { width: $cursorHook.width() + 20, height: $cursorHook.height() + 10 }
 
 	lastTime = currentTime;
 

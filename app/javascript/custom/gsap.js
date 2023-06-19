@@ -42,6 +42,7 @@ $scaling.on('mouseenter', (event) => {
 	let target = getChildTarget(event, 'list-element', 'img')
 	gsap.killTweensOf(target)
 	gsap.to(target, { scaleX: 1.05, height: '100%', duration: 0.2 })
+	if($cursorHook) return
 	cursorSize.target = { width: cursorSize.base.width + 25, height: cursorSize.base.height + 25 }
 })
 
@@ -49,6 +50,7 @@ $scaling.on('mouseleave', (event) => {
 	let target = getChildTarget(event, 'list-element', 'img')
 	gsap.killTweensOf(target)
 	gsap.to(target, { scaleX: 1, height: '100%', duration: 0.2 })
+	if($cursorHook) return
 	cursorSize.target = cursorSize.base
 })
 
@@ -62,10 +64,12 @@ $spacing.on('mouseleave', (event) => {
 
 $stretching.on('mouseenter', (event) => {
 	gsap.to(event.currentTarget, {  scaleX: 1.5, letterSpacing: '0.4em', duration: 0.2 })
+	if($cursorHook) return
 	cursorSize.target = { width: cursorSize.base.width + 100, height: cursorSize.base.height - 20 }
 })
 
 $stretching.on('mouseleave', (event) => {
 	gsap.to(event.currentTarget, {  scaleX: 1, letterSpacing: '0em', duration: 0.2 })
+	if($cursorHook) return
 	cursorSize.target = cursorSize.base
 })
