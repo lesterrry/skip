@@ -20,6 +20,10 @@ let position = {
 	}
 }
 let lastTime = 0;
+let size = {
+	width: 400,
+	height: 400
+}
 
 $(window).on('mousemove', (event) => {
 	if (hidden) hidden = setCursor(false)
@@ -40,5 +44,7 @@ const animate = (currentTime) => {
 
 	window.requestAnimationFrame(animate)
 }
+
+setCursorSize(size)
 
 window.requestAnimationFrame(animate)

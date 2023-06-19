@@ -61,11 +61,11 @@ $spacing.on('mouseleave', (event) => {
 $stretching.on('mouseenter', (event) => {
 	gsap.to(event.currentTarget, {  scaleX: 1.5, letterSpacing: '0.4em', duration: 0.2 })
 	gsap.killTweensOf($cursor[0])
-	gsap.to($cursor[0], { width: 500, duration: 0.4 })
+	gsap.to($cursor[0], { width: size.width + 100, duration: 0.4 })
 })
 
 $stretching.on('mouseleave', (event) => {
 	gsap.to(event.currentTarget, {  scaleX: 1, letterSpacing: '0em', duration: 0.2 })
 	gsap.killTweensOf($cursor[0])
-	gsap.to($cursor[0], { width: 400, duration: 0.2 })
+	gsap.to($cursor[0], { width: size.width, duration: 0.2 })
 })
