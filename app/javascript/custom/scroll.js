@@ -10,6 +10,7 @@ const $title = $('.title > .content')
 const $titleText = $('.title .text')
 const $footer = $('footer')
 const $menu = $('nav')
+
 const titleRemainPoint = 70
 
 const setScroll = () => {

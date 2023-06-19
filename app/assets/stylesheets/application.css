@@ -13,6 +13,7 @@
  *= require_self
  *= require fonts
  *= require main
+ *= require cursor
  *= require footer
  *= require grid
  *= require input
