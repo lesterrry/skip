@@ -8,8 +8,8 @@ me@aydar.media
 
 let $cursor = $('figure.cursor')
 
-let hidden = true
-let position = {
+let cursorHidden = true
+let cursorPosition = {
 	current: {
 		x: 0,
 		y: 0
@@ -19,16 +19,16 @@ let position = {
 		y: 0
 	}
 }
-let lastTime = 0;
-let size = {
+let cursorSize = {
 	width: 400,
 	height: 400
 }
+let lastTime = 0;
 
 $(window).on('mousemove', (event) => {
-	if (hidden) hidden = setCursor(false)
-	position.target.x = event.clientX
-	position.target.y = event.clientY
+	if (cursorHidden) cursorHidden = setCursor(false)
+	cursorPosition.target.x = event.clientX
+	cursorPosition.target.y = event.clientY
 })
 
 const animate = (currentTime) => {
@@ -36,15 +36,15 @@ const animate = (currentTime) => {
 
 	lastTime = currentTime;
 
-	position.current.x += (position.target.x - position.current.x) * deltaTime * 5
-	position.current.y += (position.target.y - position.current.y) * deltaTime * 5
+	cursorPosition.current.x += (cursorPosition.target.x - cursorPosition.current.x - (cursorSize.width * 0.25)) * deltaTime * 5
+	cursorPosition.current.y += (cursorPosition.target.y - cursorPosition.current.y - (cursorSize.height * 0.75)) * deltaTime * 5
 
-	const t = `translate3d(${position.current.x - 100}px,${position.current.y - 300}px,0px)`
+	const t = `translate3d(${cursorPosition.current.x}px,${cursorPosition.current.y}px,0px)`
 	$cursor.css({'transform': t, 'webkitTransform': t, 'mozTransform': t, 'msTransform': t})
 
 	window.requestAnimationFrame(animate)
 }
 
-setCursorSize(size)
+setCursorSize(cursorSize)
 
 window.requestAnimationFrame(animate)
