@@ -29,13 +29,14 @@
     }
     > div {
       display: flex;
-      gap: 10px;
+      gap: 40px;
     }
     > a {
       margin-top: 40px;
     }
     input {
       width: 100%;
+      max-width: 420px;
     }
   }
 }
