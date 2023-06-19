@@ -5,9 +5,9 @@
 -#
 
 = render 'blocks/title',
-	button_title: t('global.english'),
+	button_title: t('global.lang_switch'),
 	button_arrow: true,
-	button_link: root_url,
+	button_link: root_url + "?locale=#{I18n.locale == :ru ? 'en' : 'ru'}",
 	title: t('.title_html'),
 	subtitle: t('.subtitle')
 = render 'blocks/list',

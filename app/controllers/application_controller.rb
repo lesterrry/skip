@@ -19,25 +19,14 @@ class ApplicationController < ActionController::Base
 		cookies[:locale] = loc
 	end
 
-	# TODO: debug locales
 	def extract_locale
 		if !params[:locale].blank?
-			p 'a'
 			parsed_locale = params[:locale]
 		elsif !cookies[:locale].blank?
-			p 'b'
 			parsed_locale = cookies[:locale]
-		elsif !request.location.country_code.blank?
-			p 'c'
-			parsed_locale = request.location.country_code.downcase
-		elsif !request.env['HTTP_ACCEPT_LANGUAGE'].blank?
-			p 'd'
-			parsed_locale = request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/)[0]
 		else
-			p 'e'
 			return nil
 		end
-		p parsed_locale
 		I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : nil
 	end
 end

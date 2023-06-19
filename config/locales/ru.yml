@@ -180,4 +180,4 @@ ru:
         alert: 'Заявка отправлена, ожидайте приглашения'
   global:
     to_home: 'На главную'
-    english: 'English'
+    lang_switch: 'English'
