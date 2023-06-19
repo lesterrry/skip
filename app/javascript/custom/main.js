@@ -19,7 +19,6 @@ const setCursor = (hidden) => {
 }
 
 const setCursorSize = (size) => {
-	// $cursor.css({ 'width' : size.width, 'height': size.height })
-	gsap.to($cursor[0], { width: size.width, height: size.height, borderRadius: size.height / 10 })
+	$cursor.css({ 'width' : size.width, 'height': size.height })
 	return size
 }
