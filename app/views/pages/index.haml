@@ -20,5 +20,5 @@
 .form.oneline
 	%h1= explode_span t('.form.title'), 'stretching'
 	.white-block.unequal
-		%input{ type: 'text', placeholder: t('.form.placeholder') }
+		%input.affect-cursor{ type: 'text', placeholder: t('.form.placeholder') }
 			= render 'blocks/button', title: t('.form.submit'), link: nil, show_arrow: false, alert: t('.form.alert')

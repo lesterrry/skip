@@ -4,7 +4,7 @@
 -# me@aydar.media
 -#
 
-%a.button.spacing{ target: (link && !link.include?(root_url)) ? '_blank' : '_self', href: link || '#', class: alert && 'alert-call', data: { alert_message: alert } }
+%a.button.spacing.affect-cursor{ target: (link && !link.include?(root_url)) ? '_blank' : '_self', href: link || '#', class: alert && 'alert-call', data: { alert_message: alert } }
 	%h2= title
 	- if show_arrow
 		= image_tag 'arrow.svg'

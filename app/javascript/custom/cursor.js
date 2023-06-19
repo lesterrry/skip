@@ -7,7 +7,7 @@ me@aydar.media
 *************************/
 
 let $cursor = $('figure.cursor')
-let $buttons = $('.button')
+let $affects = $('.affect-cursor')
 
 let cursorHidden = true
 let cursorPosition = {
@@ -47,10 +47,10 @@ $(window).on('mousemove', (event) => {
 	: { x: event.clientX, y: event.clientY }
 })
 
-$buttons.on('mouseover', (event) => {
+$affects.on('mouseover', (event) => {
 	$cursorHook = $(event.currentTarget)
 })
-$buttons.on('mouseleave', (event) => {
+$affects.on('mouseleave', (event) => {
 	$cursorHook = null
 	cursorSize.target = cursorSize.base
 })
@@ -62,8 +62,8 @@ const animate = (currentTime) => {
 
 	lastTime = currentTime;
 
-	cursorPosition.current.x += (cursorPosition.target.x - cursorPosition.current.x - (cursorSize.current.width * 0.25)) * deltaTime * 5
-	cursorPosition.current.y += (cursorPosition.target.y - cursorPosition.current.y - (cursorSize.current.height * 0.75)) * deltaTime * 5
+	cursorPosition.current.x += (cursorPosition.target.x - cursorPosition.current.x - (cursorSize.current.width * 0.25)) * deltaTime * ($cursorHook ? 10 : 5)
+	cursorPosition.current.y += (cursorPosition.target.y - cursorPosition.current.y - (cursorSize.current.height * 0.75)) * deltaTime * ($cursorHook ? 10 : 5)
 
 	cursorSize.current.width += (cursorSize.target.width - cursorSize.current.width) * deltaTime * 5
 	cursorSize.current.height += (cursorSize.target.height - cursorSize.current.height) * deltaTime * 5
