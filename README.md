@@ -1,2 +1,2 @@
-# rails7-template
-I'm trying to create a modern rails template with a minimal amount of files needed to create a basic app
+# 🪩 oh my skip
+My little course project, also check [MOT](https://github.com/lesterrry/mot)
