@@ -12,4 +12,6 @@ class PagesController < ApplicationController
   def model_a; end
   def store; end
   def space; end
+
+  def not_found; end
 end

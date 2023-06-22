@@ -24,6 +24,7 @@
  *= require alert
  *= require model_a
  *= require space
+ *= require not_found
  *= require media
  */
 

@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 	get '/model-a', to: 'pages#model_a'
 	get '/store', to: 'pages#store'
 	get '/space', to: 'pages#space'
+
+	match '*unmatched_route', to: 'pages#not_found', via: :all
 end

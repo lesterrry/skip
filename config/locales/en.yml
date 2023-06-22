@@ -190,3 +190,4 @@ en:
   global:
     to_home: 'Go Home'
     lang_switch: 'Русский'
+    not_found: 'An anomaly has happened. Observe the anomaly below.'
