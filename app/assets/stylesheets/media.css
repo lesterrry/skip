@@ -6,6 +6,10 @@ me@aydar.media
 
 *************************/
 
+br.mobile {
+    display: none;
+}
+
 @media (min-width: 2230px) {
     body > div {
         width: 100%;
@@ -53,6 +57,9 @@ me@aydar.media
 }
 
 @media (max-width: 970px) {
+    br.mobile {
+        display: initial;
+    }
     .title > .content > .text > h1 {
         white-space: break-spaces;
     }

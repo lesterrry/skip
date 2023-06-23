@@ -36,7 +36,7 @@ en:
           c: 'Warranty'
   pages:
     index:
-      title_html: 'Time to change<br>time'
+      title_html: 'Time <br class="mobile">to change<br>time'
       subtitle: 'Skip changes the way the world works, adapting time
       to your personal needs'
       news:
