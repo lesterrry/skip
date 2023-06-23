@@ -13,5 +13,7 @@ class PagesController < ApplicationController
   def store; end
   def space; end
 
-  def not_found; end
+  def not_found
+    render 'not_found', status: 404
+  end
 end
