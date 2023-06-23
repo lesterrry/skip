@@ -6,7 +6,7 @@ me@aydar.media
 
 *************************/
 
-const $menuItems = $('nav > a')
+const $menuItems = $('nav.desktop > a')
 const $scaling = $('.scaling')
 const $spacing = $('.spacing')
 const $stretching = $('.stretching')
